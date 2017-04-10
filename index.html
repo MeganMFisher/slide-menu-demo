@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link href="./reset.css" rel="stylesheet">
+        <link href="./main.css" rel="stylesheet">
+</head>
+<body>
+<section>
+
+    <nav class='main-nav'>
+        <div class='main-links'>
+            <img ng-src='https://s3.amazonaws.com/devmountain/www/img/logoonly.png'>
+            <h2><a ui-sref='home'>HOME</a></h2>
+            <h2><a ui-sref='cohort'>COHORT</a></h2>
+        </div>
+        <div class='main-user'>
+            <h2>{{user}}</h2>
+            <img class='menu' src='https://cdn0.iconfinder.com/data/icons/slim-square-icons-basics/100/basics-08-128.png' ng-click='showDropdown()' onclick="openNav()">
+        </div>
+    </nav>
+    <div id='dropdown' class='main-dropdown'>
+        <p ng-click='showDropdown()'>Preferences</p>
+        <p ng-click='showDropdown()'>Logout</p>
+    </div>
+
+</section>
+<section>
+
+<div id="login-sidenav" class="login-sidenavContent">
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+  <div>
+      <h2>LOCATION</h2>
+      <div class='home-selectStyle'>
+        <select>
+            <option value="provo">Provo, UT</option>
+            <option value="slc">SLC, UT</option>
+            <option value="dallas">Dallas, TX</option>
+        </select>
+    
+    </div>
+  <a href="#">PROGRAM
+      <div class='home-selectStyle'></div>
+        <select>
+            <option value="provo">Web Development</option>
+            <option value="slc">UX Design</option>
+            <option value="dallas">iOS Development</option>
+        </select>
+        </div>
+  </a>
+
+  <a href="#">COHORT
+      <input type="search" value="Submit">
+  </a>
+
+</div>
+
+</section>
+
+<script
+  src="https://code.jquery.com/jquery-3.2.1.js"
+  integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE="
+  crossorigin="anonymous"></script>
+
+<script>
+function openNav() {
+    document.getElementById("login-sidenav").style.width = "500px";
+}
+
+function closeNav() {
+    document.getElementById("login-sidenav").style.width = "0";
+}
+
+
+// $(document).ready(function() {
+
+//     $('.menu').click(function() {
+//         $('.main-nav').fadeTo("slow" , .5, function(){
+
+//         })
+//     })
+
+//     $(".closebtn").click(function(){
+//         $('.main-nav').fadeTo("slow", 1, function(){
+
+//         })
+//     })
+// })
+</script>
+     
+</body>
+</html> 
